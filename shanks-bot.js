@@ -8,7 +8,7 @@ class RepeatingReciprocalFinder {
         this.quotientDigits = 0
     }
 
-    findDividend() {
+    findStartingDividend() {
         var dividend = 1
         while (this.n > dividend) dividend *= 10
         return dividend
@@ -25,7 +25,7 @@ class RepeatingReciprocalFinder {
     }
 
     getDigitsUntilReciprocalRepeats() {
-        var currentDividend = this.findDividend();
+        var currentDividend = this.findStartingDividend();
         var repeating = false;
 
         while (!repeating) {
