@@ -15,13 +15,7 @@ class RepeatingReciprocalFinder {
     }
 
     findGreatestMultiple(butNotGreaterThan) {
-        var sum = 0
-        var multiples = 0
-        while ((sum + input) < butNotGreaterThan) {
-            sum += input
-            ++multiples
-        }
-        return sum // multiples would go into the quotient but we don't need it
+        return Math.floor(butNotGreaterThan / input) * input
     }
 
     getDigitsUntilReciprocalRepeats() {
